@@ -1,0 +1,51 @@
+:root {
+  --bg: #fbf7f2;
+  --surface: #ffffff;
+  --ink: #1e2a33;
+  --muted: #5d6870;
+  --line: #e7e0d6;
+  --accent: #ff9103;
+  --accent-text: #b35f00;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #12181d;
+    --ink: #f3efe9;
+    --muted: #a3acb3;
+    --line: #26313a;
+    --accent-text: #ffa53a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Asap', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 32px; }
+.brand { font-family: 'Bebas Neue', 'Asap', sans-serif; font-size: 34px; letter-spacing: 1px; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 15px; }
+nav a:hover, nav a[aria-current='page'] { color: var(--accent-text); }
+h1 { font-family: 'Bebas Neue', 'Asap', sans-serif; font-weight: 400; font-size: 44px; line-height: 1.05; letter-spacing: 0.5px; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+p, li { color: var(--ink); }
+.meta { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+.lang { display: inline-block; margin: 0 0 24px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; color: var(--accent-text); text-decoration: none; font-size: 14px; }
+a { color: var(--accent-text); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; margin: 16px 0; }
+.card h2 { margin-top: 0; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+code { font-size: 15px; }
+@media (max-width: 480px) {
+  h1 { font-size: 38px; }
+  nav a { margin-left: 10px; }
+}
